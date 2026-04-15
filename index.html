@@ -6,17 +6,15 @@
 
   <title>VXLAN & Modern Networking Course</title>
 
-  <!-- ✅ SEO (Google search optimization) -->
   <meta name="description" content="Learn VXLAN, BGP, EVPN and modern data center networking with real labs.">
   <meta name="keywords" content="VXLAN, BGP, EVPN, networking course, data center networking, CCNP, CCNA">
   <meta name="author" content="SmartDC Networking">
 
-  <!-- ✅ Allow Google to index your site -->
   <meta name="robots" content="index, follow">
 
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.6;
@@ -26,7 +24,7 @@
 
     header {
       position: relative;
-      padding: 40px 20px;
+      padding: 80px 20px; /* Increased padding for better focus on text */
       text-align: center;
       background: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31') no-repeat center/cover;
       color: white;
@@ -39,7 +37,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(10, 25, 47, 0.8); /* Darkened overlay for better readability */
       z-index: 1;
     }
 
@@ -49,61 +47,79 @@
     }
 
     header h1 {
-      color: #ffffff;
+      font-size: 2.5rem;
+      color: #64ffda; /* Changed to a classic "Terminal Green" for tech attention */
       text-shadow: 0px 0px 10px rgba(0,0,0,0.8);
+      margin-bottom: 10px;
     }
 
     header p {
+      font-size: 1.2rem;
       text-shadow: 0px 0px 8px rgba(0,0,0,0.8);
     }
 
     section {
       padding: 40px 20px;
-      max-width: 900px;
+      max-width: 800px;
       margin: auto;
       background: white;
-      color: black;
+      color: #333;
       margin-top: 20px;
       border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
 
     h2 {
       color: #0a192f;
+      border-bottom: 2px solid #64ffda;
+      display: inline-block;
+      padding-bottom: 5px;
     }
 
     .cta {
-      background: #f4f4f4;
-      padding: 30px;
+      background: #f0f7ff; /* Light blue tint to make the form stand out */
+      padding: 50px 30px;
       text-align: center;
+      border: 2px solid #64ffda;
       border-radius: 10px;
     }
 
+    .cta h2 {
+        border-bottom: none;
+    }
+
     input {
-      padding: 10px;
-      width: 250px;
-      margin-right: 10px;
+      padding: 12px;
+      width: 280px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
     }
 
     button {
-      padding: 10px 20px;
+      padding: 12px 25px;
       background: #0a192f;
-      color: white;
-      border: none;
+      color: #64ffda; /* Button text matches headline for branding */
+      border: 1px solid #64ffda;
+      border-radius: 5px;
+      font-weight: bold;
+      text-transform: uppercase;
       cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: #64ffda;
+      color: #0a192f;
     }
 
     footer {
       text-align: center;
-      padding: 20px;
-      background: #eee;
-      color: black;
-      margin-top: 20px;
-    }
-
-    .diagram {
-      display: flex;
-      justify-content: center;
-      margin-top: 30px;
+      padding: 30px;
+      background: #0a192f;
+      color: #8892b0;
+      margin-top: 40px;
+      font-size: 0.9rem;
     }
 
     img {
@@ -113,7 +129,8 @@
 
     label {
       display: block;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      font-weight: bold;
     }
 
   </style>
@@ -123,61 +140,44 @@
 
 <header>
   <h1>Master VXLAN, BGP & Modern Networking</h1>
-  <p>Practical, real-world networking for engineers</p>
-
-  <div class="diagram">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Leaf-spine-network-topology.png" alt="Leaf Spine Network Diagram">
-  </div>
+  <p>Practical, real-world data center architecture for the modern engineer.</p>
 </header>
 
 <section>
   <h2>Why This Matters</h2>
-  <p>Traditional networking is no longer enough. Modern data centers rely on VXLAN, EVPN, and BGP-driven fabrics.</p>
-  <p>If you don't understand these, you're already behind.</p>
+  <p>Traditional networking is no longer enough. Modern data centers rely on <strong>VXLAN, EVPN, and BGP-driven fabrics</strong> to scale.</p>
+  <p>If you aren't comfortable with these protocols, your career is hitting a bottleneck. We bridge the gap between theory and actual implementation.</p>
 </section>
 
 <section>
   <h2>What You Will Learn</h2>
   <ul>
-    <li>VXLAN from basics to advanced</li>
-    <li>BGP for real-world designs</li>
-    <li>EVPN control plane explained simply</li>
-    <li>Hands-on labs and troubleshooting</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Who This Is For</h2>
-  <ul>
-    <li>Network Engineers (CCNA / CCNP)</li>
-    <li>Engineers moving to data center roles</li>
-    <li>Anyone wanting real-world skills</li>
+    <li><strong>VXLAN:</strong> From packet walkthroughs to multi-site designs.</li>
+    <li><strong>BGP:</strong> The backbone of the modern DC—simplified.</li>
+    <li><strong>EVPN:</strong> Why it’s the control plane of choice and how to build it.</li>
+    <li><strong>Labs:</strong> Real-world scenarios using industry-standard tools.</li>
   </ul>
 </section>
 
 <section class="cta">
-  <h2>Join Early Access</h2>
-  <p>This course is being built. Join the waitlist to get early access.</p>
+  <h2>Be the First to Know</h2>
+  <p>The course is currently in development. Join the waitlist to receive exclusive early access and a launch discount.</p>
 
   <form action="https://formspree.io/f/xnjlnevq" method="POST">
-
-    <label>
-      Enter your email:
-      <input type="email" name="email" placeholder="Enter your email" required>
-    </label>
-
-    <button type="submit">Join Waitlist</button>
-
+    <label for="email">Enter your professional email:</label>
+    <input type="email" id="email" name="email" placeholder="engineer@company.com" required>
+    <br>
+    <button type="submit">Get Early Access</button>
   </form>
 </section>
 
 <section>
-  <h2>Sample Insight: What is VXLAN?</h2>
-  <p>VXLAN allows Layer 2 networks to scale over Layer 3 using encapsulation. It replaces VLAN limitations and enables modern scalable architectures.</p>
+  <h2>Quick Insight: Why VXLAN?</h2>
+  <p>Standard VLANs are limited to 4,096 IDs. In a massive cloud environment, that's nothing. VXLAN expands this to <strong>16 million</strong> IDs and lets you stretch Layer 2 across any Layer 3 network—making workload mobility a reality.</p>
 </section>
 
 <footer>
-  <p>© 2026 Networking Course Validation</p>
+  <p>© 2026 SmartDC Networking | Built for Engineers</p>
 </footer>
 
 </body>
