@@ -3,63 +3,195 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartDC Academy | Advanced Networking & Automation</title>
   
-  <title>SmartDC Academy | Core Routing, Data Center Fabric & Automation</title>
-  <meta name="description" content="Master the full networking stack: From OSPF and BGP to VXLAN EVPN and Infrastructure as Code with Ansible and Terraform.">
-  <meta name="keywords" content="Network Engineering, OSPF, BGP, VXLAN, EVPN, Ansible, Terraform, Network Automation, Cisco, Arista">
-
   <style>
-    /* ... (CSS remains the same as the previous professional dark-theme version) ... */
     :root {
       --bg-color: #0a192f;
       --card-bg: #112240;
       --accent: #64ffda;
       --text-main: #e6f1ff;
       --text-dim: #8892b0;
+      --border: #233554;
     }
-    body { font-family: 'Inter', sans-serif; background: var(--bg-color); color: var(--text-main); margin: 0; }
-    nav { display: flex; justify-content: space-between; padding: 20px 10%; border-bottom: 1px solid #233554; }
-    header { padding: 120px 20px; text-align: center; background: linear-gradient(rgba(10,25,47,0.85), rgba(10,25,47,0.85)), url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31') no-repeat center/cover; }
+
+    body {
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: var(--bg-color);
+      color: var(--text-main);
+    }
+
+    /* Professional Navigation */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      background: rgba(10, 25, 47, 0.95);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo { font-weight: bold; font-size: 1.5rem; color: var(--accent); text-decoration: none; }
+    .nav-links a { color: var(--text-main); text-decoration: none; margin-left: 25px; font-size: 0.9rem; }
+    .nav-links a:hover { color: var(--accent); }
+
+    /* Updated Broad Header */
+    header {
+      padding: 100px 20px;
+      text-align: center;
+      background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.85)), 
+                  url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31') no-repeat center/cover;
+    }
+
     header h1 { font-size: 3.2rem; color: var(--accent); margin-bottom: 15px; }
-    header p { font-size: 1.4rem; color: var(--text-dim); max-width: 800px; margin: auto; }
-    .container { max-width: 1100px; margin: 50px auto; padding: 0 20px; }
-    .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-    .card { background: var(--card-bg); padding: 25px; border-radius: 10px; border: 1px solid #233554; transition: 0.3s; }
-    .card:hover { border-color: var(--accent); transform: translateY(-5px); }
-    .badge { color: var(--accent); font-size: 0.8rem; font-weight: bold; text-transform: uppercase; margin-bottom: 10px; display: block; }
-    button { padding: 15px 30px; background: transparent; color: var(--accent); border: 1px solid var(--accent); cursor: pointer; border-radius: 5px; font-weight: bold; }
-    button:hover { background: var(--accent); color: var(--bg-color); }
+    header p { font-size: 1.3rem; color: var(--text-dim); max-width: 800px; margin: auto; }
+
+    /* Main Content Area */
+    .container { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+    
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      margin-bottom: 80px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
+
+    .card:hover { border-color: var(--accent); transform: translateY(-8px); }
+    .card h3 { color: var(--accent); margin-top: 10px; }
+    .card ul { padding-left: 20px; color: var(--text-dim); }
+    .badge { color: var(--accent); font-size: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+
+    /* Call to Action (Waitlist Form) */
+    .cta-box {
+      background: var(--card-bg);
+      padding: 60px 40px;
+      text-align: center;
+      border-radius: 12px;
+      border: 1px solid var(--accent);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .cta-box h2 { margin-top: 0; font-size: 2rem; }
+    
+    form { display: flex; flex-direction: column; align-items: center; gap: 15px; margin-top: 30px; }
+    
+    input[type="email"] {
+      padding: 15px;
+      width: 100%;
+      max-width: 400px;
+      background: var(--bg-color);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: white;
+      font-size: 1rem;
+    }
+
+    input:focus { outline: none; border-color: var(--accent); }
+
+    .btn-submit {
+      padding: 15px 40px;
+      background: transparent;
+      color: var(--accent);
+      border: 2px solid var(--accent);
+      border-radius: 6px;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 1rem;
+    }
+
+    .btn-submit:hover { background: var(--accent); color: var(--bg-color); }
+
+    footer { text-align: center; padding: 60px 20px; color: var(--text-dim); border-top: 1px solid var(--border); }
   </style>
 </head>
 
 <body>
 
 <nav>
-  <div style="font-weight: bold; font-size: 1.5rem; color: var(--accent);">SmartDC Academy</div>
+  <a href="#" class="logo">SmartDC Academy</a>
   <div class="nav-links">
-    <a href="#infrastructure" style="color: white; text-decoration: none; margin-left: 20px;">Infrastructure</a>
-    <a href="#fabric" style="color: white; text-decoration: none; margin-left: 20px;">DC Fabric</a>
-    <a href="#automation" style="color: white; text-decoration: none; margin-left: 20px;">Automation</a>
+    <a href="#tracks">Courses</a>
+    <a href="#register">Register</a>
   </div>
 </nav>
 
 <header>
-  <h1>Master the Modern Network Stack</h1>
-  <p>Deep-dive technical training for the next generation of Network Engineers. From core protocol theory to automated infrastructure deployment.</p>
+  <h1>Master the Full Networking Stack</h1>
+  <p>Practical, lab-driven training covering Core Routing, Data Center Fabric, and Infrastructure as Code.</p>
 </header>
 
 <div class="container">
+  
+  <div id="tracks" style="text-align: center; margin-bottom: 40px;">
+    <h2 style="font-size: 2rem; border-bottom: 2px solid var(--accent); display: inline-block;">Available Modules</h2>
+  </div>
+
   <div class="course-grid">
-    
-    <div class="card" id="infrastructure">
-      <span class="badge">Core Networking</span>
-      <h3>Enterprise Routing & Switching</h3>
-      <p>Master the fundamentals and advanced configurations of enterprise-grade connectivity.</p>
-      <ul style="color: var(--text-dim);">
-        <li>OSPF Multi-Area & Link States</li>
-        <li>BGP Path Selection & Route Policies</li>
-        <li>Advanced L2/L3 Redundancy</li>
+    <div class="card">
+      <div class="badge">Infrastructure</div>
+      <h3>Advanced Routing</h3>
+      <p>Deep dive into the protocols that move the world's data.</p>
+      <ul>
+        <li>OSPF Multi-Area & Tuning</li>
+        <li>BGP Path Attributes & RR</li>
+        <li>Advanced IPv4/IPv6 Routing</li>
       </ul>
     </div>
 
-    <div class="
+    <div class="card">
+      <div class="badge">Data Center</div>
+      <h3>Modern DC Fabric</h3>
+      <p>Building high-scale leaf-spine architectures.</p>
+      <ul>
+        <li>VXLAN Single Fabric</li>
+        <li>VXLAN Multi-Site (DCI)</li>
+        <li>EVPN Control Plane</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="badge">Automation</div>
+      <h3>Network Programmability</h3>
+      <p>Scale your impact with Infrastructure as Code.</p>
+      <ul>
+        <li>Ansible for Fleet Management</li>
+        <li>Terraform for Cloud & On-Prem</li>
+        <li>Python for Net-Ops</li>
+      </ul>
+    </div>
+  </div>
+
+  <section id="register" class="cta-box">
+    <h2>Secure Early Access</h2>
+    <p style="color: var(--text-dim);">The course is in active development. Register below to join the waitlist and receive exclusive launch discounts and early lab access.</p>
+
+    <form action="https://formspree.io/f/xnjlnevq" method="POST">
+      <input type="email" id="email" name="email" placeholder="engineer@company.com" required>
+      <button type="submit" class="btn-submit">Get Early Access</button>
+    </form>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2026 SmartDC Academy | Built for Engineers by Engineers</p>
+</footer>
+
+</body>
+</html>
