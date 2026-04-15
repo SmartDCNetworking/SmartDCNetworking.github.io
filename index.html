@@ -51,7 +51,6 @@
     header h1 { font-size: 3.5rem; color: var(--accent); margin-bottom: 20px; line-height: 1.1; }
     header p { font-size: 1.4rem; color: var(--text-main); max-width: 850px; margin: auto; font-weight: 300; }
 
-    /* SALES-FOCUSED INTRODUCTION */
     .hero-intro {
       background: var(--card-bg);
       padding: 80px 20px;
@@ -72,6 +71,7 @@
 
     @media (max-width: 768px) {
       .intro-grid { grid-template-columns: 1fr; text-align: center; }
+      header h1 { font-size: 2.5rem; }
     }
 
     .intro-text h2 { color: var(--accent); font-size: 2.2rem; margin-bottom: 20px; }
@@ -88,6 +88,7 @@
       position: relative;
       color: var(--text-main);
       font-weight: 500;
+      text-align: left;
     }
 
     .value-props li::before {
@@ -98,7 +99,6 @@
       font-weight: bold;
     }
 
-    /* COURSE GRID */
     .container { max-width: 1100px; margin: 80px auto; padding: 0 20px; }
     
     .course-grid {
@@ -117,10 +117,9 @@
 
     .card:hover { border-color: var(--accent); transform: translateY(-10px); box-shadow: 0 10px 30px var(--cta-glow); }
     .card h3 { color: var(--accent); margin-top: 15px; font-size: 1.5rem; }
-    .card ul { padding-left: 20px; color: var(--text-dim); margin-top: 20px; }
+    .card ul { padding-left: 20px; color: var(--text-dim); margin-top: 20px; text-align: left; }
     .badge { background: rgba(100, 255, 218, 0.1); color: var(--accent); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; padding: 5px 12px; border-radius: 20px; }
 
-    /* CONVERSION FORM */
     .cta-box {
       background: linear-gradient(135deg, var(--card-bg) 0%, #1d2d50 100%);
       padding: 80px 40px;
@@ -137,4 +136,130 @@
       width: 100%;
       max-width: 400px;
       background: var(--bg-color);
-      border: 1px solid var
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: white;
+      font-size: 1rem;
+    }
+
+    input[type="email"]:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .btn-submit {
+      padding: 18px 45px;
+      background: var(--accent);
+      color: var(--bg-color);
+      border: none;
+      border-radius: 8px;
+      font-weight: 800;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 4px 14px 0 var(--cta-glow);
+    }
+
+    .btn-submit:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(100, 255, 218, 0.4); }
+
+    footer { text-align: center; padding: 80px 20px; color: var(--text-dim); font-size: 0.9rem; letter-spacing: 1px; }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="#" class="logo">SMARTDC ACADEMY</a>
+  <div class="nav-links">
+    <a href="#about">The Methodology</a>
+    <a href="#tracks">Tracks</a>
+    <a href="#register">Early Access</a>
+  </div>
+</nav>
+
+<header>
+  <h1>Stop Learning Theory.<br><span style="color: #fff;">Start Building Fabrics.</span></h1>
+  <p>The definitive resource for Senior Engineers to master VXLAN, BGP, and Automation through the lens of production-ready architecture.</p>
+</header>
+
+<section class="hero-intro" id="about">
+  <div class="intro-container">
+    <div class="intro-grid">
+      <div class="intro-text" style="text-align: left;">
+        <h2>The Architecture-First Approach</h2>
+        <p>Documentation tells you what a command does. SmartDC Academy tells you <strong>why</strong> to use it, <strong>where</strong> it breaks, and <strong>how</strong> to automate it at scale.</p>
+        <p>This isn't just a digital product; it's a career-accelerator designed to turn network admins into infrastructure architects.</p>
+      </div>
+      <div>
+        <ul class="value-props">
+          <li><strong>Production-Ready Templates:</strong> No more "hello world" configs. Get the exact templates we use in global data centers.</li>
+          <li><strong>Line-by-Line Execution:</strong> Deep-dive explanations for every feature, flag, and protocol attribute.</li>
+          <li><strong>Scenario-Based Labs:</strong> Solve real-world outages and design challenges in GNS3/EVE-NG.</li>
+          <li><strong>Automation Native:</strong> Move from CLI to Terraform and Ansible as a standard, not an afterthought.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  
+  <div id="tracks" style="text-align: center; margin-bottom: 60px;">
+    <h2 style="font-size: 2.5rem; color: #fff;">Curated Learning Tracks</h2>
+    <p style="color: var(--text-dim);">Deep-dive modules designed to be consumed individually or as a complete stack.</p>
+  </div>
+
+  <div class="course-grid">
+    <div class="card">
+      <div class="badge">Advanced Routing</div>
+      <h3>Enterprise Core</h3>
+      <p>Master the protocols that form the nervous system of the modern enterprise.</p>
+      <ul>
+        <li>Advanced OSPF Multi-Area Tuning</li>
+        <li>BGP Path Selection & Community Logic</li>
+        <li>IPv6 Transition & Dual-Stack Design</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="badge">DC Fabric</div>
+      <h3>VXLAN EVPN Mastery</h3>
+      <p>Go from Single-Fabric basics to complex Multi-Site DCI deployments.</p>
+      <ul>
+        <li>Layer 2 & Layer 3 VNI Packet Walks</li>
+        <li>Anycast Gateway & ARP Suppression</li>
+        <li>Multi-Site External Border Connectivity</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="badge">Programmability</div>
+      <h3>Infrastructure as Code</h3>
+      <p>Bridge the gap between traditional networking and modern DevOps.</p>
+      <ul>
+        <li>Ansible for Automated Configuration</li>
+        <li>Terraform for Multi-Vendor Provisioning</li>
+        <li>Python-driven API Orchestration</li>
+      </ul>
+    </div>
+  </div>
+
+  <section id="register" class="cta-box">
+    <h2 style="color: var(--accent);">Level Up Your Infrastructure Game</h2>
+    <p style="color: var(--text-main); font-size: 1.2rem;">Join the waitlist to receive the <strong>"Production Config Checklist"</strong> and secure 40% early-bird pricing.</p>
+
+    <form action="https://formspree.io/f/xnjlnevq" method="POST">
+      <input type="email" name="email" placeholder="Enter your professional email" required>
+      <button type="submit" class="btn-submit">Secure Early Access</button>
+    </form>
+    <p style="margin-top: 20px; font-size: 0.8rem; color: var(--text-dim);">No spam. Just high-quality technical updates.</p>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2026 SMARTDC ACADEMY | ENGINEERED FOR THE 1%</p>
+</footer>
+
+</body>
+</html>
