@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SmartDC Academy | Production-Ready Networking & Automation</title>
+  <title>SmartDC Solutions | Enterprise Architecture & Infrastructure Consultancy</title>
   <style>
     :root {
       --bg-color: #0a192f;
@@ -41,9 +41,9 @@
     .nav-links a:hover { color: var(--accent); }
 
     header {
-      padding: 120px 20px;
+      padding: 140px 20px;
       text-align: center;
-      background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)), 
+      background: linear-gradient(rgba(10, 25, 47, 0.92), rgba(10, 25, 47, 0.92)), 
                   url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31') no-repeat center/cover;
     }
 
@@ -57,7 +57,7 @@
     }
 
     .intro-container {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
     }
 
@@ -98,16 +98,16 @@
       font-weight: bold;
     }
 
-    .container { max-width: 1100px; margin: 80px auto; padding: 0 20px; }
+    .container { max-width: 1200px; margin: 80px auto; padding: 0 20px; }
     
     .course-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap: 30px;
     }
 
     .card {
-      background: var(--bg-color);
+      background: var(--card-bg);
       padding: 40px;
       border-radius: 12px;
       border: 1px solid var(--border);
@@ -116,6 +116,7 @@
 
     .card:hover { border-color: var(--accent); transform: translateY(-10px); box-shadow: 0 10px 30px var(--cta-glow); }
     .card h3 { color: var(--accent); margin-top: 15px; font-size: 1.5rem; }
+    .card p { color: var(--text-main); font-weight: 500; margin-top: 10px; }
     .card ul { padding-left: 20px; color: var(--text-dim); margin-top: 20px; text-align: left; }
     .badge { background: rgba(100, 255, 218, 0.1); color: var(--accent); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; padding: 5px 12px; border-radius: 20px; }
 
@@ -161,39 +162,39 @@
 
     .btn-submit:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(100, 255, 218, 0.4); }
 
-    footer { text-align: center; padding: 80px 20px; color: var(--text-dim); font-size: 0.9rem; letter-spacing: 1px; }
+    footer { text-align: center; padding: 80px 20px; color: var(--text-dim); font-size: 0.8rem; letter-spacing: 1px; }
   </style>
 </head>
 
 <body>
   <nav>
-    <a href="#" class="logo">SMARTDC ACADEMY</a>
+    <a href="#" class="logo">SMARTDC SOLUTIONS</a>
     <div class="nav-links">
-      <a href="#about">The Methodology</a>
-      <a href="#tracks">Tracks</a>
-      <a href="#register">Early Access</a>
+      <a href="#services">Consulting</a>
+      <a href="#enablement">Strategic Enablement</a>
+      <a href="#contact">Consultation</a>
     </div>
   </nav>
 
   <header>
-    <h1>Stop Learning Theory.<br><span style="color: #fff;">Start Building Fabrics.</span></h1>
-    <p>The definitive resource for Senior Engineers to master VXLAN, BGP, and Automation through the lens of production-ready architecture.</p>
+    <h1>Architecting the Future<br><span style="color: #fff;">of Connectivity.</span></h1>
+    <p>Bespoke Infrastructure Strategy, Data Center Fabric Engineering, and specialized solutions for Enterprises, Hospitality, and Institutions.</p>
   </header>
 
-  <section class="hero-intro" id="about">
+  <section class="hero-intro" id="services">
     <div class="intro-container">
       <div class="intro-grid">
         <div class="intro-text" style="text-align: left;">
-          <h2>The Architecture-First Approach</h2>
-          <p>Documentation tells you what a command does. SmartDC Academy tells you <strong>why</strong> to use it, <strong>where</strong> it breaks, and <strong>how</strong> to automate it at scale.</p>
-          <p>This isn't just a digital product; it's a career-accelerator designed to turn network admins into infrastructure architects.</p>
+          <h2>Consultancy vs. Configuration</h2>
+          <p>Traditional vendors sell hardware. SmartDC Solutions delivers <strong>architectural integrity</strong>. We focus on the "Why," ensuring your infrastructure scales with business velocity.</p>
+          <p>With over a decade of senior engineering leadership, we bridge the gap between complex multi-vendor protocols and high-availability production environments.</p>
         </div>
         <div>
           <ul class="value-props">
-            <li><strong>Production-Ready Templates:</strong> No more "hello world" configs. Get the exact templates we use in global data centers.</li>
-            <li><strong>Line-by-Line Execution:</strong> Deep-dive explanations for every feature, flag, and protocol attribute.</li>
-            <li><strong>Scenario-Based Labs:</strong> Solve real-world outages and design challenges in GNS3/EVE-NG.</li>
-            <li><strong>Automation Native:</strong> Move from CLI to Terraform and Ansible as a standard, not an afterthought.</li>
+            <li><strong>Design & Deployment:</strong> High-performance LAN/WAN lifecycle management.</li>
+            <li><strong>Security-First Access:</strong> Perimeter hardening via Cisco ISE and identity-driven policy.</li>
+            <li><strong>Industry-Specific Wi-Fi:</strong> RF-optimized engineering for high-density environments.</li>
+            <li><strong>Automation Workflows:</strong> Eliminating manual toil through Python, Terraform, and Ansible.</li>
           </ul>
         </div>
       </div>
@@ -201,60 +202,107 @@
   </section>
 
   <div class="container">
-    <div id="tracks" style="text-align: center; margin-bottom: 60px;">
-      <h2 style="font-size: 2.5rem; color: #fff;">Curated Learning Tracks</h2>
-      <p style="color: var(--text-dim);">Deep-dive modules designed to be consumed individually or as a complete stack.</p>
+    <div style="text-align: center; margin-bottom: 60px;">
+      <h2 style="font-size: 2.5rem; color: #fff;">Market-Specific Professional Services</h2>
+      <p style="color: var(--text-dim);">Outcome-driven engineering for high-traffic environments and mission-critical operations.</p>
     </div>
 
     <div class="course-grid">
       <div class="card">
-        <div class="badge">Advanced Routing</div>
-        <h3>Enterprise Core</h3>
-        <p>Master the protocols that form the nervous system of the modern enterprise.</p>
+        <div class="badge">Hospitality & Retail</div>
+        <h3>Guest Experience & WiFi</h3>
+        <p>Reliable, branded connectivity for Hotels and Cafes.</p>
         <ul>
-          <li>Advanced OSPF Multi-Area Tuning</li>
-          <li>BGP Path Selection & Community Logic</li>
-          <li>IPv6 Transition & Dual-Stack Design</li>
+          <li>Seamless Roaming & Captive Portal Integration</li>
+          <li>Secure Traffic Isolation (VLAN Segmentation)</li>
+          <li>RF Heatmapping for 100% Signal Coverage</li>
         </ul>
       </div>
 
       <div class="card">
-        <div class="badge">DC Fabric</div>
-        <h3>VXLAN EVPN Mastery</h3>
-        <p>Go from Single-Fabric basics to complex Multi-Site DCI deployments.</p>
+        <div class="badge">Education</div>
+        <h3>Campus & Learning Networks</h3>
+        <p>Future-proofed LAN/WAN for Schools and Institutions.</p>
         <ul>
-          <li>Layer 2 & Layer 3 VNI Packet Walks</li>
-          <li>Anycast Gateway & ARP Suppression</li>
-          <li>Multi-Site External Border Connectivity</li>
+          <li>Multi-Gigabit Backbone for Digital Learning</li>
+          <li>Content Filtering & Regulatory Compliance (CIPA)</li>
+          <li>Credential-Based Wireless Security (802.1X)</li>
         </ul>
       </div>
 
       <div class="card">
-        <div class="badge">Programmability</div>
-        <h3>Infrastructure as Code</h3>
-        <p>Bridge the gap between traditional networking and modern DevOps.</p>
+        <div class="badge">Security</div>
+        <h3>Perimeter & Data Integrity</h3>
+        <p>Hardened networking for Small & Medium Business footprints.</p>
         <ul>
-          <li>Ansible for Automated Configuration</li>
-          <li>Terraform for Multi-Vendor Provisioning</li>
-          <li>Python-driven API Orchestration</li>
+          <li>Next-Gen Firewall (NGFW) Architecture</li>
+          <li>Zero-Trust Remote Access (VPN/MFA)</li>
+          <li>Automated Threat Detection & Endpoint Protection</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="badge">Architecture</div>
+        <h3>Resilient Connectivity</h3>
+        <p>Eliminating operational downtime through high-availability WAN strategies.</p>
+        <ul>
+          <li>Multi-Transport Redundancy & Path Selection</li>
+          <li>Cloud-Managed Edge Orchestration (Meraki/Aruba/Fortinet)</li>
+          <li>Sub-Second Convergence for Mission-Critical Services</li>
         </ul>
       </div>
     </div>
 
-    <section id="register" class="cta-box">
-      <h2 style="color: var(--accent);">Level Up Your Infrastructure Game</h2>
-      <p style="color: var(--text-main); font-size: 1.2rem;">Join the waitlist to receive the <strong>"Production Config Checklist"</strong> and secure 40% early-bird pricing.</p>
+    <div id="enablement" style="text-align: center; margin: 100px 0 60px 0;">
+      <h2 style="font-size: 2.5rem; color: #fff;">Strategic Core Competencies</h2>
+      <p style="color: var(--text-dim);">Expert-led blueprints for teams requiring master-level technical enablement.</p>
+    </div>
 
+    <div class="course-grid">
+      <div class="card">
+        <div class="badge">Architecture</div>
+        <h3>Enterprise Core Mastery</h3>
+        <ul>
+          <li>Multi-Area OSPF & BGP Path Optimization</li>
+          <li>Dual-Stack IPv6 Transition Strategy</li>
+          <li>Campus Fabric & SD-Access Integration</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="badge">Fabric Engineering</div>
+        <h3>VXLAN EVPN Mastery</h3>
+        <ul>
+          <li>L2/L3 VNI Packet Walk Analysis</li>
+          <li>Distributed Anycast Gateway Design</li>
+          <li>DCI & Multi-Site Connectivity</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="badge">DevOps</div>
+        <h3>Infrastructure as Code</h3>
+        <ul>
+          <li>Terraform Providers for Multi-Vendor Fabric</li>
+          <li>Ansible for Rapid Deployment</li>
+          <li>Python-Driven API Orchestration</li>
+        </ul>
+      </div>
+    </div>
+
+    <section id="contact" class="cta-box">
+      <h2 style="color: var(--accent);">Start Your Architectural Evolution</h2>
+      <p style="color: var(--text-main); font-size: 1.1rem; margin-bottom: 20px;">Ready to optimize your infrastructure or empower your team?</p>
       <form action="https://formspree.io/f/xnjlnevq" method="POST">
         <input type="email" name="email" placeholder="Enter your professional email" required>
-        <button type="submit" class="btn-submit">Secure Early Access</button>
+        <button type="submit" class="btn-submit">Request Consultation</button>
       </form>
-      <p style="margin-top: 20px; font-size: 0.8rem; color: var(--text-dim);">No spam. Just high-quality technical updates.</p>
+      <p style="margin-top: 20px; font-size: 0.8rem; color: var(--text-dim);">Confidentiality guaranteed. Professional inquiries only.</p>
     </section>
   </div>
 
   <footer>
-    <p>© 2026 SMARTDC ACADEMY | ENGINEERED FOR THE 1%</p>
+    <p>© 2026 SMARTDC SOLUTIONS | HIGH-FIDELITY INFRASTRUCTURE ARCHITECTURE</p>
   </footer>
 </body>
 </html>
